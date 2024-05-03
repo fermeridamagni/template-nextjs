@@ -8,7 +8,7 @@ interface MainProps {
 
 export default function Main({ children, id, className }: MainProps) {
   return (
-    <main id={id} className={cn("w-full h-full animate-fade flex", className)}>
+    <main id={id} className={cn("w-full h-full flex", className)}>
       {children}
     </main>
   );
