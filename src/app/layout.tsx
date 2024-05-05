@@ -7,7 +7,13 @@ export const metadata = {
   title: "",
   description: "",
   keywords: "",
-  auhor: "",
+  creator: "",
+  authors: [
+    {
+      name: "",
+      url: "",
+    },
+  ],
 };
 
 interface RootLayoutProps {
