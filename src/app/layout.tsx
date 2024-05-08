@@ -1,7 +1,7 @@
 import Providers from "@/app/providers";
 
-import { fontText } from "@/resources/fonts/fonts.config";
-import "@/resources/styles/globals.css";
+import { fontText } from "@/assets/fonts/fonts.config";
+import "@/assets/styles/globals.css";
 
 export const metadata = {
   title: "",
