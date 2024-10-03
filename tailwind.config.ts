@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        text: ["var(--font-text)"],
+        text: ["var(--text)"],
       },
     },
   },

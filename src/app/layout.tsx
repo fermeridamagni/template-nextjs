@@ -1,32 +1,38 @@
-import Providers from "@/app/providers";
+import type { Metadata } from "next";
 
-import { fontText } from "@/assets/fonts/fonts.config";
+import Providers from "@/app/providers";
+import Header from "@/components/partials/header";
+import Footer from "@/components/partials/footer";
+
+import { fontText } from "@/assets/fonts/config";
 import "@/assets/styles/globals.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "",
   description: "",
   keywords: "",
   creator: "",
-  authors: [
-    {
-      name: "",
-      url: "",
-    },
-  ],
+  authors: [],
+  manifest: "/manifest.json",
 };
 
-interface RootLayoutProps {
+export interface RootLayoutProps {
   children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className="w-full h-full scroll-smooth">
       <body
-        className={`${fontText.variable} font-text w-full h-full bg-white text-black`}
+        className={`${fontText.variable} font-text w-full h-full`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+
+          {children}
+
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

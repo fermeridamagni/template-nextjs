@@ -1,14 +1,12 @@
-import { cn } from "@/utils/utils";
+import React from "react";
 
-interface SectionProps {
-  children: React.ReactNode;
-  id?: string;
-  className?: string;
-}
+import { cn } from "@/utils/cn";
 
-export default function Section({ children, id, className }: SectionProps) {
+interface SectionProps extends React.HTMLProps<HTMLDivElement> { }
+
+export default function Section({ children, className, ...props }: SectionProps) {
   return (
-    <section id={id} className={cn("w-full h-auto flex", className)}>
+    <section className={cn("w-full h-full flex z-0", className)} {...props}>
       {children}
     </section>
   );

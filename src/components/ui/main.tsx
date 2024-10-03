@@ -1,14 +1,12 @@
-import { cn } from "@/utils/utils";
+import React from "react";
 
-interface MainProps {
-  children: React.ReactNode;
-  id?: string;
-  className?: string;
-}
+import { cn } from "@/utils/cn";
 
-export default function Main({ children, id, className }: MainProps) {
+interface MainProps extends React.HTMLProps<HTMLDivElement> { }
+
+export default function Main({ children, className, ...props }: MainProps) {
   return (
-    <main id={id} className={cn("w-full h-full flex", className)}>
+    <main className={cn("w-full h-full flex flex-1 z-0", className)} {...props}>
       {children}
     </main>
   );
